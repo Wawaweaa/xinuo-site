@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熹诺 - 专业的电商财税合规专家</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="iconfont.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+        }
+
+        /* Mesh Gradient Background */
+        .bg-mesh {
+            background-color: #f8fafc;
+            background-image:
+                /* Hero Area */
+                radial-gradient(at 0% 0%, hsla(217, 91%, 95%, 1) 0, transparent 55%),
+                radial-gradient(at 50% 10%, hsla(230, 80%, 96%, 1) 0, transparent 55%),
+                /* Service Section Area */
+                radial-gradient(at 90% 30%, hsla(220, 90%, 97%, 1) 0, transparent 50%),
+                radial-gradient(at 10% 45%, hsla(250, 70%, 98%, 1) 0, transparent 50%),
+                /* Why Us & Flow Area */
+                radial-gradient(at 80% 65%, hsla(230, 80%, 97%, 1) 0, transparent 50%),
+                radial-gradient(at 0% 85%, hsla(217, 91%, 96%, 1) 0, transparent 50%),
+                /* Footer Area */
+                radial-gradient(at 50% 100%, hsla(240, 70%, 98%, 1) 0, transparent 55%);
+        }
+
+        /* Glassmorphism Utilities */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Iconfont Symbol Style */
+        .symbol-icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor !important;
+            /* 强制覆盖 SVG 内部定义的 fill 颜色 */
+            stroke: currentColor;
+            stroke-width: 0;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+            overflow: hidden;
+        }
+
+        /* 给第一个图标增加圆角描边感 */
+        .icon-rounded-fix {
+            stroke-width: 40px;
+            /* 在 1024px 的 ViewBox 下约等于 4% 的圆角 */
+        }
+    </style>
+</head>
+
+<body class="bg-mesh text-slate-800 antialiased min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold">
+                        熹
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">熹诺财税</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-10">
+                    <a href="#services"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">服务方案</a>
+                    <a href="#about"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">关于我们</a>
+                    <a href="#contact"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">联系咨询</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex">
+                    <a href="#contact"
+                        class="px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800 transition-all shadow-lg shadow-slate-200">
+                        立即咨询
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-18 lg:pt-28 lg:pb-10 overflow-hidden">
+        <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+
+                <!-- Text Content -->
+                <div class="max-w-2xl relative z-10">
+
+                    <h1 class="text-5xl lg:text-7xl font-extrabold tracking-normal text-slate-900 mb-8 leading-relaxed">
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">电商财税</span>
+                        <span class="block mt-2"> 合规和优化专家</span>
+                    </h1>
+
+
+                    <p class="text-lg text-slate-500 mb-16 leading-relaxed max-w-lg">
+                        为中小微电商提供从基础记账、合规申报到经营分析的
+                        <br>
+                        一站式解决方案，既是安全保障也是增长引擎。
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button
+                            class="px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-xl tracking-wider shadow-xl shadow-blue-200 hover:shadow-2xl hover:translate-y-[-2px] transition-all duration-300">
+                            立即咨询
+                        </button>
+                        <!-- <button
+                            class="px-8 py-4 rounded-full bg-white text-slate-700 font-semibold text-lg border border-slate-200 hover:bg-slate-50 transition-all duration-300">
+                            了解服务内容
+                        </button> -->
+                    </div>
+
+                    <div class="mt-8 flex items-center gap-6 text-md text-slate-400 font-medium tracking-wide">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            能省钱
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            降风险
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            助增长
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Abstract Visual -->
+                <div class="relative lg:h-[600px] flex items-center justify-center">
+                    <!-- Decorative blobs -->
+                    <div
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-blue-400/30 to-purple-400/30 rounded-full blur-3xl animate-pulse">
+                    </div>
+
+                    <!-- Main Graphic (SVG) -->
+                    <div
+                        class="relative w-full max-w-[440px] glass rounded-3xl p-7 shadow-2xl transform rotate-[-5deg] hover:rotate-0 transition-transform duration-700 ease-out">
+                        <!-- Mock Chart UI -->
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="flex gap-2">
+                                <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                            </div>
+                        </div>
+
+                        <!-- 柱状图容器 -->
+                        <div class="relative">
+                            <!-- 增长标签（居中于最后一根柱子上方） -->
+                            <div class="absolute -top-8 right-[3%] text-green-500 text-xl font-bold">
+                                +105%
+                            </div>
+
+                            <div class="flex gap-4 items-end h-48 px-4 pb-4">
+                                <div class="w-1/5 bg-blue-100 rounded-t-lg h-[42%]"></div>
+                                <div class="w-1/5 bg-blue-200 rounded-t-lg h-[55%]"></div>
+                                <div class="w-1/5 bg-blue-300 rounded-t-lg h-[53%]"></div>
+                                <div class="w-1/5 bg-blue-400 rounded-t-lg h-[75%]"></div>
+                                <div
+                                    class="w-1/5 bg-gradient-to-t from-blue-600 to-indigo-500 rounded-t-lg h-[100%] shadow-lg shadow-blue-500/30 relative group">
+                                    <div
+                                        class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                        +126%
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 时间标签 -->
+                            <div class="flex gap-4 px-4 -mt-1 border-t border-slate-100">
+                                <div class="w-1/5 text-center text-sm text-slate-400">24Q4</div>
+                                <div class="w-1/5 text-center text-sm text-slate-400">25Q1</div>
+                                <div class="w-1/5 text-center text-sm text-slate-400">25Q2</div>
+                                <div class="w-1/5 text-center text-sm text-slate-400">25Q3</div>
+                                <div class="w-1/5 text-center text-sm text-slate-400">25Q4</div>
+                            </div>
+                        </div>
+                        <!-- <div class="mt-2 flex justify-between items-center">
+                            <div class="-mt-2 ml-2">
+                                <p class="text-xs text-slate-400 uppercase tracking-wider">Total Saving</p>
+                                <p class="text-2xl font-bold text-slate-900">¥ 2,450,000</p>
+                            </div>
+                            <div
+                                class="h-10 w-10 mr-3 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <!-- Floating Badge 1 -->
+                    <div
+                        class="absolute top-20 right-0 glass px-4 py-3 rounded-xl shadow-lg animate-[bounce_3s_infinite]">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500">审计合规</p>
+                                <p class="text-sm font-bold text-slate-800">100% 通过</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badge 2 -->
+                    <div
+                        class="absolute bottom-20 left-0 glass px-4 py-3 rounded-xl shadow-lg animate-[bounce_3s_infinite]">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                <span class="text-lg">¥</span>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500">税务优化</p>
+                                <p class="text-sm font-bold text-slate-800">-50% 成本</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="py-12 lg:py-10 relative">
+        <div class="max-w-[1220px] mx-auto px-6 lg:px-12 relative z-10">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl lg:text-5xl font-extrabold text-slate-900 tracking-normal mb-8">全生命周期财税服务</h2>
+                <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+                    从初创期的基础申报，到发展期的业务优化，再到成熟期的精细运营，
+                    <br>
+                    我们为中小微企业提供可靠和共同成长的财税服务。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+                <!-- 基础版 -->
+                <div
+                    class="glass rounded-3xl p-6 border border-gray-200 border-t-4 border-t-gray-200 hover:transform hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-xl group flex flex-col h-full">
+                    <!-- 标题 -->
+                    <div class="flex items-baseline gap-2 mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">基础版</h3>
+                        <p class="text-sm font-bold text-slate-400">零申报</p>
+                    </div>
+
+                    <!-- 价格 -->
+                    <div class="mb-3 space-y-1">
+                        <div><span class="font-bold text-slate-900 text-2xl">¥600</span><span
+                                class="text-slate-500 text-xs">/年 </span> <span
+                                class="text-xs text-slate-400">小规模</span></div>
+                        <div class="invisible"><span class="font-bold text-2xl">占位</span></div>
+                    </div>
+
+                    <!-- 横线 + 服务列表 -->
+                    <div class="pt-3 border-t border-slate-100 flex-1">
+                        <p class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3">报税服务</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-gray-400 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                季度增值税及附加税费申报
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-gray-400 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                季度企业所得税预缴申报
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-gray-400 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                月度个人所得税（工资）申报
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-gray-400 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                企业所得税汇算清缴
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-gray-400 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                企业工商年报
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 进阶版 -->
+                <div
+                    class="glass rounded-3xl p-6 border border-green-500 border-t-4 border-t-green-500 hover:transform hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-xl group relative overflow-hidden flex flex-col h-full">
+                    <!-- 标题 -->
+                    <div class="flex items-baseline gap-2 mb-2">
+                        <h3 class="text-xl font-bold text-green-500">进阶版</h3>
+                        <p class="text-sm font-bold text-slate-400">明细记账</p>
+                    </div>
+
+                    <!-- 价格 -->
+                    <div class="mb-3 space-y-1">
+                        <div><span class="font-bold text-slate-900 text-2xl">¥300</span><span
+                                class="text-slate-500 text-xs">/月起</span> <span
+                                class="text-xs text-slate-400">小规模</span></div>
+                        <div><span class="font-bold text-slate-900 text-2xl">¥600</span><span
+                                class="text-slate-500 text-xs">/月起</span> <span
+                                class="text-xs text-slate-400">一般纳税人</span></div>
+                    </div>
+
+                    <!-- 横线 + 服务列表 -->
+                    <div class="pt-3 border-t border-slate-100 flex-1">
+                        <p class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3">基础版全部服务，并增加:</p>
+
+                        <p class="text-sm font-bold text-green-500 uppercase tracking-wider mt-3 mb-2">报税</p>
+                        <ul class="space-y-1">
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                月/季度增值税、附加税申报
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                月度社保申报
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                残保金年度申报
+                            </li>
+                        </ul>
+
+                        <p class="text-sm font-bold text-green-500 uppercase tracking-wider mt-3 mb-2">记账</p>
+                        <ul class="space-y-1">
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                录入期初数据
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                日常账务处理
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                登记明细账
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                编制科目余额表
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                编制资产负债表
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                编制利润表
+                            </li>
+                        </ul>
+
+                        <p class="text-sm font-bold text-green-500 uppercase tracking-wider mt-3 mb-2">发票服务</p>
+                        <ul class="space-y-1">
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                发票开具咨询
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                发票额度调整申请
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 高阶版 -->
+                <div
+                    class="glass rounded-3xl p-6 border border-blue-600 border-t-4 border-t-blue-600 hover:transform hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-xl group relative flex flex-col h-full">
+                    <!-- 旧推荐标签 -->
+                    <!-- <div class="absolute top-6 right-4">
+                        <span class="text-sm font-bold text-blue-500 border border-blue-500 rounded-lg px-3 py-1.5 tracking-wider">推荐</span>
+                    </div> -->
+
+                    <!-- 新推荐标签 - 融合右上角 -->
+                    <div
+                        class="absolute top-0 right-0 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-md font-bold pl-7 pr-6 py-1 rounded-bl-3xl rounded-tr-2xl tracking-wider">
+                        推荐
+                    </div>
+
+                    <!-- 标题 -->
+                    <div class="flex items-baseline gap-2 mb-2">
+                        <h3 class="text-xl font-bold text-blue-600">高阶版</h3>
+                        <p class="text-sm font-bold text-slate-400">库存对账</p>
+                    </div>
+
+                    <!-- 价格 -->
+                    <div class="mb-3 space-y-1">
+                        <div><span class="font-bold text-slate-900 text-2xl">¥800</span><span
+                                class="text-slate-500 text-xs">/月起</span> <span
+                                class="text-xs text-slate-400">小规模</span></div>
+                        <div><span class="font-bold text-slate-900 text-2xl">¥1500</span><span
+                                class="text-slate-500 text-xs">/月起</span> <span
+                                class="text-xs text-slate-400">一般纳税人</span></div>
+                    </div>
+
+                    <!-- 横线 + 服务列表 -->
+                    <div class="pt-3 border-t border-slate-100 flex-1">
+                        <p class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3">进阶版全部服务，并增加：</p>
+
+                        <p class="text-sm font-bold text-blue-600 uppercase tracking-wider mt-3 mb-2">库存对账</p>
+                        <ul class="space-y-1">
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-blue-600 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                录入期初数据
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-blue-600 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                基于《销售统计表》编制出库单
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-blue-600 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                基于客户采购发票编制入库单
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-blue-600 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                销售成本结转
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 专属版 -->
+                <div
+                    class="glass rounded-3xl p-6 border border-purple-600 border-t-4 border-t-purple-600 hover:transform hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-xl group relative flex flex-col h-full">
+                    <!-- 推荐标签 -->
+                    <div
+                        class="absolute top-0 right-0 bg-gradient-to-r from-violet-600 to-purple-600 text-white text-md font-bold pl-7 pr-6 py-1 rounded-bl-3xl rounded-tr-2xl tracking-wider">
+                        推荐
+                    </div>
+
+                    <!-- 标题 -->
+                    <div class="flex items-baseline gap-2 mb-2">
+                        <h3 class="text-xl font-bold text-purple-500">专属版</h3>
+                        <p class="text-sm font-bold text-slate-400">分析咨询</p>
+                    </div>
+
+                    <!-- 价格 -->
+                    <div class="mb-3 space-y-1">
+                        <div><span class="font-bold text-slate-900 text-2xl">¥1500</span><span
+                                class="text-slate-500 text-xs">/月起</span> <span
+                                class="text-xs text-slate-400">小规模</span></div>
+                        <div><span class="font-bold text-slate-900 text-2xl">¥3500</span><span
+                                class="text-slate-500 text-xs">/月起</span> <span
+                                class="text-xs text-slate-400">一般纳税人</span></div>
+                    </div>
+
+                    <!-- 横线 + 服务列表 -->
+                    <div class="pt-3 border-t border-slate-100 flex-1">
+                        <p class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3">高阶版全部服务，并增加：</p>
+
+                        <p class="text-sm font-bold text-purple-500 uppercase tracking-wider mt-3 mb-2">发票服务</p>
+                        <ul class="space-y-1">
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                代开发票
+                            </li>
+                        </ul>
+
+                        <p class="text-sm font-bold text-purple-500 uppercase tracking-wider mt-3 mb-2">库存对账</p>
+                        <ul class="space-y-1">
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                单品级《平台销售统计表》
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                单品级《平台销售费用统计表》
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                采购进票建议
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                采购商品与销售商品的匹配建议
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                编制入库单
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                无票商品暂估入库单
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                月度销售分析表
+                            </li>
+                            <li class="flex items-start text-[13px] text-slate-600 gap-2">
+                                <svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                定制业务和经营分析（额外费用）
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="about" class="py-20">
+        <div class="max-w-[1220px] mx-auto px-6 lg:px-12">
+            <div class="mb-16">
+                <h2 class="text-3xl lg:text-5xl font-extrabold text-slate-900 tracking-normal mb-8">为什么选熹诺？</h2>
+            </div>
+
+            <!-- 带分隔线的三列网格 -->
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 border border-white rounded-2xl overflow-hidden bg-gradient-to-br from-white/90 via-white/40 to-violet-100/30 backdrop-blur-md shadow-xl shadow-blue-900/5">
+                <!-- Feature 1 -->
+                <div class="flex flex-col p-10 group md:border-r border-white">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-indigo-100 flex items-center justify-center text-indigo-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <!-- 图标已移除 -->
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">能合规，保利润</h3>
+                    <p class="text-slate-500 leading-relaxed">把财税统筹嵌入日常运营，搭建"合规的赚钱模型"，让合规成本落在利润可承受范围内。</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="flex flex-col p-10 group md:border-r border-white border-t md:border-t-0">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-indigo-100 flex items-center justify-center text-indigo-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="symbol-icon text-4xl" aria-hidden="true">
+                            <use xlink:href="#icon-fi-rr-high-five-celebration-yes"></use>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">最懂你，不埋雷</h3>
+                    <p class="text-slate-500 leading-relaxed">深知中小微电商财税场景和需求，提供极高性价比的硬核对账服务，为长期合规打下坚实基础，扫除风险。</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex flex-col p-10 group border-t md:border-t-0">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-indigo-100 flex items-center justify-center text-indigo-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="symbol-icon text-4xl" aria-hidden="true">
+                            <use xlink:href="#icon-caiwuchengchangxilie"></use>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">搭体系，助成长</h3>
+                    <p class="text-slate-500 leading-relaxed">帮助企业搭建可持续成长的财税体系，让财务和业务组织相互："算得对"、"看得懂"、"管得好"。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Section -->
+    <section id="service" class="py-20">
+        <div class="max-w-[1220px] mx-auto px-6 lg:px-12">
+            <div class="mb-16">
+                <h2 class="text-3xl lg:text-5xl font-extrabold text-slate-900 tracking-normal mb-8">服务流程</h2>
+            </div>
+
+            <!-- 流程步骤 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div
+                    class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl mb-6">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">步骤标题</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">步骤描述内容待填充...</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div
+                    class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center text-green-600 font-bold text-xl mb-6">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">步骤标题</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">步骤描述内容待填充...</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div
+                    class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold text-xl mb-6">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">步骤标题</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">步骤描述内容待填充...</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div
+                    class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 font-bold text-xl mb-6">
+                        4
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">步骤标题</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">步骤描述内容待填充...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-50 border-t border-slate-200 py-16">
+        <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-12">
+                <!-- Contact Info -->
+                <div class="max-w-md">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div
+                            class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white font-bold">
+                            熹</div>
+                        <span class="font-bold text-xl text-slate-900">熹诺财税</span>
+                    </div>
+                    <p class="text-slate-500 mb-8">上海市浦东新区某某路123号<br>hello@xino.com</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-blue-600 hover:border-blue-200 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-blue-600 hover:border-blue-200 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- QR Code -->
+                <div class="flex flex-col items-center">
+                    <div class="w-32 h-32 bg-white p-2 rounded-lg border border-slate-200 shadow-sm mb-3">
+                        <div
+                            class="w-full h-full bg-slate-100 flex items-center justify-center text-slate-300 text-xs text-center p-2">
+                            微信二维码<br>占位符
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-500">扫码咨询专属顾问</p>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-slate-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-400">
+                <p>&copy; 2024 上海熹诺财务咨询有限公司 版权所有</p>
+                <p class="mt-2 md:mt-0">沪ICP备12345678号-1</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
