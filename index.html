@@ -251,10 +251,10 @@
 
             /* ==================== Hero 区域移动端专属样式 ==================== */
 
-            /* 标题字体加大，行高紧凑 */
+            /* 标题字体加大，行高与桌面端一致 */
             .hero-title {
-                font-size: 48px;
-                line-height: 1.15;
+                font-size: 48px !important;
+                line-height: 1.0 !important;
                 margin-bottom: 24px;
             }
 
@@ -262,11 +262,13 @@
             .hero-title-line1 {
                 display: block;
                 padding-top: 36px;
+                line-height: 1.0 !important;
             }
 
-            /* 两行间距减小 */
+            /* 两行间距与桌面端一致（无间隙） */
             .hero-title-line2 {
-                margin-top: 0;
+                margin-top: 0 !important;
+                line-height: 1.0 !important;
             }
 
             /* 描述文字自然换行 */
