@@ -314,15 +314,28 @@
 
             /* ==================== Section 标题和描述移动端样式 ==================== */
 
-            /* Section 标题：36px + 左对齐 */
+            /* Section 标题：34px + 左对齐 */
             section h2 {
-                font-size: 36px !important;
+                font-size: 34px !important;
                 text-align: left !important;
             }
 
             /* Section 描述：左对齐 */
             section h2+p {
                 text-align: left !important;
+            }
+
+            /* ==================== Section 间距统一 ==================== */
+
+            /* Hero: pt保持96px，pb改56px */
+            section:first-of-type {
+                padding-bottom: 56px !important;
+            }
+
+            /* 其他所有 section: pt=56px, pb=56px */
+            section:not(:first-of-type) {
+                padding-top: 56px !important;
+                padding-bottom: 56px !important;
             }
         }
     </style>
